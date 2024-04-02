@@ -28,6 +28,7 @@ CREATE TABLE events (
   event_photo TEXT NOT NULL,
   is_virtual boolean,
   accept_donation boolean,
+  donation_amount NUMERIC,
   rsvp BOOLEAN DEFAULT false,
   stripe_id VARCHAR(225)
 );
