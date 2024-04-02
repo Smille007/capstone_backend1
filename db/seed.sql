@@ -1,10 +1,10 @@
 \c impactify_app
 
-INSERT INTO users (first_name, last_name, user_name, email, password_hash, user_keywords)
+INSERT INTO users (first_name, last_name, user_name, email, password_hash)
 VALUES
-  ('John', 'Doe', 'johndoe', 'johnniedoe@yahoo.com', 'password123', ARRAY['activism', 'politics', 'social justice']),
-  ('Jane', 'Smith', 'janesmith', 'janieyysmithhh@aol.com', 'password456', ARRAY['community', 'equality', 'environment']),
-  ('Alice', 'Johnson', 'alicej', 'allicee12@yahoo.com', 'password789', ARRAY['human rights', 'climate change', 'volunteer']);
+  ('John', 'Doe', 'johndoe', 'johnniedoe@yahoo.com', 'password123'),
+  ('Jane', 'Smith', 'janesmith', 'janieyysmithhh@aol.com', 'password456'),
+  ('Alice', 'Johnson', 'alicej', 'allicee12@yahoo.com', 'password789');
 
 -- events should have some related keywords
 INSERT INTO events (user_id, event_title, event_date, event_time, lat, lng, event_keywords, event_location, event_details, event_photo, is_virtual, accept_donation, rsvp, stripe_id)
@@ -34,7 +34,7 @@ Across the war-ravaged Gaza Strip, severe malnutrition has shot up dramatically 
 
 Medical charity attacked The war has taken a severe toll on aid workers, with hundreds reported killed. A Médecins Sans Frontières (MSF) shelter was shelled Tuesday night (local time), injuring staff and killing members of their family. UN Emergency Relief Coordinator, Martin Griffiths, said he was appalled by the attack, adding that he stood with them in their grief.
 
-“Humanitarians are putting their lives on the line. Like all civilians, they must be protected,” he added, in a post on X, formerly Twitter. ‘What world do we live in’ WHO chief Tedros reiterated the grave risks for humanitarians and the need to ensure they are protected. “What type of world do we live when people cannot get food and water, and when people who cannot even walk are unable to receive care?”, he lamented. “What type of world do we live in when health workers are at risk of being bombed as they carry out their life saving work [and] hospitals must close because there is no more power or medicines to help save patients?” Tweet URL He underscored the need for an immediate ceasefire.', 'https://news.un.org/en/story/2024/02/1146792', 'https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production%20Library/21-02-2024_WHO_Gaza.jpg/image1170x530cropped.jpg', ARRAY['Palestine', 'war', 'global issue', 'humanitarian']),
+“Humanitarians are putting their lives on the line. Like all civilians, they must be protected,” he added, in a post on X, formerly Twitter. ‘What world do we live in’ WHO chief Tedros reiterated the grave risks for humanitarians and the need to ensure they are protected. “What type of world do we live when people cannot get food and water, and when people who cannot even walk are unable to receive care?”, he lamented. “What type of world do we live in when health workers are at risk of being bombed as they carry out their life saving work [and] hospitals must close because there is no more power or medicines to help save patients?” Tweet URL He underscored the need for an immediate ceasefire.', 'https://news.un.org/en/story/2024/02/1146792', 'https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production%20Library/21-02-2024_WHO_Gaza.jpg/image1170x530cropped.jpg', ARRAY['Palestine', 'war', 'global issue', 'humanitarian', 'global']),
 
 ('Ukraine: 2024 starts with "loss, pain, and anguish" amid intense Russian strikes', 102, 'In a statement on Tuesday, UN Humanitarian Coordinator Denise Brown strongly condemned the assaults targeting mostly cities.
 
@@ -42,7 +42,7 @@ Medical charity attacked The war has taken a severe toll on aid workers, with hu
 
 She emphasized that the situation is particularly alarming as many parts of the capital, Kyiv, have been left without electricity or water, which is particularly dangerous as temperatures are forecast to drop to -20 degrees Celsius later this week.
 
-Violation of humanitarian law Ms. Brown on Tuesday once again reminded the Russian Federation that ‘indiscriminate attacks against civilians and civilian infrastructure are strictly forbidden under international humanitarian law’.', 'https://news.un.org/en/story/2024/01/1145232', 'https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/Embargoed/29-12-2023-Ukraine-Odesa2.jpg/image770x420cropped.jpg', ARRAY['Ukraine', 'war', 'global issue', 'humanitarian']),
+Violation of humanitarian law Ms. Brown on Tuesday once again reminded the Russian Federation that ‘indiscriminate attacks against civilians and civilian infrastructure are strictly forbidden under international humanitarian law’.', 'https://news.un.org/en/story/2024/01/1145232', 'https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/Embargoed/29-12-2023-Ukraine-Odesa2.jpg/image770x420cropped.jpg', ARRAY['Ukraine', 'war', 'global issue', 'humanitarian', 'global']),
 
 ('The Climate Impact of War', 103, 'Israel-Palestine War The escalating conflict in Palestine has now put the spotlight on emissions and environmental damages resulting from war.
 
@@ -56,6 +56,6 @@ Indirect pollution from the war includes the carbon emissions that will be relea
 
 Prior to the outbreak of war, Gaza had one of the world’s highest densities of solar rooftop installations. However, the current war has destroyed these solar systems, with 17 of the 29 largest rooftop solar installations either completely destroyed or displaying significant external damage.
 
-This sets back the region’s climate change efforts and its environmental governance. At COP 28, where Palestine held', 'https://www.theguardian.com/commentisfree/2024/jan/09/emission-from-war-military-gaza-ukraine-climate-change', 'https://i.guim.co.uk/img/media/0c734ee173e5a443cbc5540508956516f6e7a69b/0_199_3000_1800/master/3000.jpg?width=620&dpr=2&s=none', ARRAY['Climate', 'war', 'global issue', 'humanitarian']);
+This sets back the region’s climate change efforts and its environmental governance. At COP 28, where Palestine held', 'https://www.theguardian.com/commentisfree/2024/jan/09/emission-from-war-military-gaza-ukraine-climate-change', 'https://i.guim.co.uk/img/media/0c734ee173e5a443cbc5540508956516f6e7a69b/0_199_3000_1800/master/3000.jpg?width=620&dpr=2&s=none', ARRAY['Climate', 'war', 'global issue', 'humanitarian', 'global']);
 
 

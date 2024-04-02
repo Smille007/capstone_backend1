@@ -34,8 +34,8 @@ const getUsers = async () => {
         const hashedPassword = await bcrypt.hash(password_hash, saltRounds);
 
         const newUser = await db.one(
-            "INSERT INTO users (first_name, last_name, user_name, email, password_hash, user_keywords) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
-            [first_name, last_name, user_name, email, hashedPassword, user_keywords]
+            "INSERT INTO users (first_name, last_name, user_name, email, password_hash) VALUES ($1, $2, $3, $4, $5) RETURNING *",
+            [first_name, last_name, user_name, email, hashedPassword]
         );
 
         return newUser;
