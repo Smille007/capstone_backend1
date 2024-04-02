@@ -10,8 +10,7 @@ CREATE TABLE users (
   last_name VARCHAR(255) NOT NULL,
   user_name VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL UNIQUE,
-  password_hash VARCHAR(255),
-  user_keywords TEXT[]
+  password_hash VARCHAR(255)
 );
  
 
@@ -29,6 +28,7 @@ CREATE TABLE events (
   event_photo TEXT NOT NULL,
   is_virtual boolean,
   accept_donation boolean,
+  donation_amount NUMERIC,
   rsvp BOOLEAN DEFAULT false,
   stripe_id VARCHAR(225)
 );
