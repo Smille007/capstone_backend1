@@ -12,6 +12,14 @@ const {
   deleteUser,
 } = require("../queries/users");
 
+const {
+  checkFirstName,
+  checkLastName,
+  checkUserName,
+  checkEmail,
+  checkPasswordHash,
+} = require("../validations/checkUsers")
+
 // GET users
 users.get("/", async (req, res) => {
   try {
@@ -33,7 +41,7 @@ users.get("/:id", async (req, res) => {
 });
 
 // POST new user
-users.post("/register", async (req, res) => {
+users.post("/register", checkFirstName, checkLastName, checkUserName, checkEmail, checkPasswordHash, async (req, res) => {
   try {
     const newUser = await createUser(req.body);
     const token = jwt.sign(
@@ -47,7 +55,7 @@ users.post("/register", async (req, res) => {
 });
 
 // PUT update user
-users.put("/:id", async (req, res) => {
+users.put("/:id", checkFirstName, checkLastName, checkUserName, checkEmail, checkPasswordHash, async (req, res) => {
   try {
     const updatedUser = await updateUser(req.params.id, req.body);
     res.status(200).json(updatedUser);
@@ -56,7 +64,7 @@ users.put("/:id", async (req, res) => {
   }
 });
 
-users.post("/login", async (req, res) => {
+users.post("/login", checkFirstName, checkLastName, checkUserName, checkEmail, checkPasswordHash, async (req, res) => {
   try {
     const user = await logInUser(req.body);
     if (!user) {
