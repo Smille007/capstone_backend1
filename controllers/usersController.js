@@ -67,6 +67,7 @@ users.put("/:id", checkFirstName, checkLastName, checkUserName, checkEmail, chec
 users.post("/login", async (req, res) => {
   try {
     const user = await logInUser(req.body);
+    console.log(user);
     if (!user) {
       res.status(401).json({ error: "Invalid username or password" });
       return;
@@ -91,7 +92,7 @@ users.post("/login", async (req, res) => {
     res.status(200).json({
       user: {
         user_id: user.user_id,
-        username: user.username,
+        username: user.user_name,
         email: user.email,
       },
       token,
