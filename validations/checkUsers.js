@@ -1,11 +1,4 @@
 
-// user_id SERIAL PRIMARY KEY,
-//   first_name VARCHAR(255) NOT NULL,
-//   last_name VARCHAR(255) NOT NULL,
-//   user_name VARCHAR(255) NOT NULL,
-//   email VARCHAR(255) NOT NULL UNIQUE,
-//   password_hash VARCHAR(255),
-//   user_keywords TEXT[]
 const checkFirstName = (req, res, next) => {
     if(req.body.first_name){
         return next()
